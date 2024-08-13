@@ -4,7 +4,7 @@ namespace SAMSPlugin\Remote\URIs;
 
 class TableURI {
 
-    private $verband;
+    private $verbandUri;
     private $apiKey;
     private $matchSeries;
 
