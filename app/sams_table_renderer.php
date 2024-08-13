@@ -8,15 +8,15 @@ use SAMSPlugin\Presenters\TablePresenter;
 
 class SAMSTableRenderer {
 
-    public static function fetchAndRender($apiKey, $matchSeriesId) {
-        $tableUri = new TableURI($apiKey, $matchSeriesId);
+    public static function fetchAndRender($verband, $apiKey, $matchSeriesId) {
+        $tableUri = new TableURI($verband, $apiKey, $matchSeriesId);
         $fetcher = new XMLFetcher();
         $fetchedXml = $fetcher->fetch($tableUri->toString());
         if (\is_a($fetchedXml, "SimpleXMLElement")) {
             $table = new SAMSTable($fetchedXml);
             return TablePresenter::render($table);
         } else {
-            return "Table not found (Match Series ID: $matchSeriesId - API Key $apiKey)";
+            return "Table not found (Verband: $verband, Match Series ID: $matchSeriesId, API Key: $apiKey)";
         }
     }
 }
