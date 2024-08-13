@@ -1,6 +1,9 @@
 <?php
 /*
 Plugin Name: SAMS Plugin
+Description: Display game plan and results from the German volleyball leagues
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
 require_once("autoload.php");
