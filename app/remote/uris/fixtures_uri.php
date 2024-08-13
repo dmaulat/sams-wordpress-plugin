@@ -20,7 +20,7 @@ class FixturesURI {
 
     public function toString() {
         return "https://"
-        . this->verbandUri
+        . $this->verbandUri
         . "/xml/matches.xhtml?apiKey=" 
         . $this->apiKey 
         ."&matchSeriesId=" 
