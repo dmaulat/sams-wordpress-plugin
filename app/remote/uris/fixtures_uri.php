@@ -12,7 +12,7 @@ class FixturesURI {
     public function __construct($verband, $apiKey, $matchSeriesId, $teamId) {
         $this->validateArguments($apiKey, $matchSeriesId, $teamId);
         
-        $this->verbandUri = this->getUriForVerband($verband);
+        $this->verbandUri = $this->getUriForVerband($verband);
         $this->apiKey = $apiKey;
         $this->matchSeriesId = $matchSeriesId;
         $this->teamId = $teamId;
@@ -20,7 +20,7 @@ class FixturesURI {
 
     public function toString() {
         return "https://"
-        . this->$verbandUri
+        . this->verbandUri
         . "/xml/matches.xhtml?apiKey=" 
         . $this->apiKey 
         ."&matchSeriesId=" 
