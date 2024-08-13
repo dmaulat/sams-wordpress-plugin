@@ -69,7 +69,7 @@ class FixturesURI {
                 return "www.vlw-online.de";
             case "hvv": 
             case "hessen": 
-                return "www.vlw-online.de";
+                return "hessen-volley.de";
             case "svv": 
             case "saarland": 
                 return "svv.sams-server.de";
