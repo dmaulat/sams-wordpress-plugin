@@ -11,14 +11,14 @@ class TableURI {
     public function __construct($verband, $apiKey, $matchSeriesId) {
         $this->validateArguments($apiKey, $matchSeriesId);
 
-        $this->verbandUri = this->getUriForVerband($verband);
+        $this->verbandUri = $this->getUriForVerband($verband);
         $this->apiKey = $apiKey;
         $this->matchSeries = $matchSeriesId;
     }
 
     public function toString() {
         return "https://"
-        . $this->$verbandUri
+        . $this->verbandUri
         . "/xml/rankings.xhtml?apiKey=" 
         . $this->apiKey 
         . "&matchSeriesId=" 
